@@ -1,33 +1,106 @@
 body {
 	background: #cffff2;
+	color: #4e4f4f;
 }
 
 header {
-	height: 100px;
+	min-height: 100px;
 	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	background: white;
+	font-family: 'Patua One', cursive;
+	z-index: 10;
 }
 
 h1 {
 	flex:  1;
-	
+	padding: 20px;
 }
 
 nav {
 	flex:  1;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
+}
+
+nav a {
+	border: 2px solid #cffff2;
+	border-radius: 10px;
+	padding: 15px 20px;
+	text-decoration: none;
+	background-color: #cffff2;
+	color: #4e4f4f;
+}
+
+nav a:hover {
+	border: 2px solid #cffff2;
+	border-radius: 10px;
+	padding: 15px 20px;
+	text-decoration: none;
+	background-color: white;
+	color: #4e4f4f;
+}
+
+h2, h3 {
+	font-family: 'Patua One', cursive;
+}
+
+p, li{
+	font-family: 'Varela Round', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Patua One', cursive;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+	font-family: 'Patua One', cursive;
+}
+
+img {
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px 5px;
+}
+
+/*media queries*/
+@media screen and (max-width:599px) {
+header {
+	text-align: center;
+	flex-direction: column;
+}
+
+h1 {
+	font-size: 18px;
+}
+
+div.intro {
+	flex-direction: column;
+
+}
+
+div.intro > img {
+	order: 1;
+	max-width: 300px;
+	margin-top: 30px;
+}
+
 }
 
 /*contact*/ 
 .contactform {
-	border: 1px solid black;
+	border: 1px solid #4e4f4f;
+	border-radius: 10px;
 	width: 300px;
-	padding: 20px;
+	padding: 30px;
 	display: flex;
 	margin-top: 200px;
 	margin-left: auto;
@@ -40,15 +113,20 @@ nav {
 	text-align: center;
 }
 
+textarea {
+	margin-top: 30px;
+}
+
 /*home*/
 div.intro{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 200px;
-	align-items: flex-start;
+	align-items: center;
 }
 
 .welcometext {
@@ -56,7 +134,23 @@ div.intro{
 }
 
 div.intro > img {
+	transform: rotate(90deg);
 	flex: 1;
+	max-width: 300px;
+	border-radius: 10px;
+}
+
+h3.imageheading {
+	text-align: center;
+	margin-top: 70px;
+}
+
+div.images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items:center;
+	margin-bottom: 30px;
 }
 
 /*about me*/
